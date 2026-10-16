@@ -89,6 +89,7 @@ jobs:
     needs: changesets
     if: needs.changesets.outputs.should_publish == 'true'
     permissions:
+      actions: read
       contents: write
       id-token: write
     uses: ./.github/workflows/publish.yml
